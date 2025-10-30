@@ -550,6 +550,8 @@
     <cim:IdentifiedObject.mRID>55893c3d-b222-40cd-b18b-8941bfb4d9c2</cim:IdentifiedObject.mRID>
     <cim:IdentifiedObject.name>Current flow through the line CL6 is higher than TATL</cim:IdentifiedObject.name>
     <nc:PinOperationalLimit.OperationalLimit rdf:resource="#_0a60b94d-13e6-43ad-1135-09fe81afb5a4" />
+	<!-- Added attribute, which says this pin is controllable for if it should be a possible input or not. True means that it is possible that this input activates the SIPS in default settings. -->
+	<nc:GateInputPin.normalEnabled>true</nc:GateInputPin.normalEnabled> 
   </nc:PinOperationalLimit>
 <!-- SIPS1 Stage1 which should be activated when line CL6 is overload above TATL after first LF&CA -->
   <nc:Stage rdf:ID="_2f60b546-dfcf-4e0c-b0d6-40264de45cbd">
@@ -605,6 +607,8 @@
     <cim:IdentifiedObject.mRID>d101c17c-c67a-4a33-b8ad-aaee4ca6563e</cim:IdentifiedObject.mRID>
     <cim:IdentifiedObject.name>Generator HÄLLAN_G3 breaker CT72_G3-S OPEN</cim:IdentifiedObject.name>
     <nc:TopologyAction.Switch rdf:resource="#_dafeb217-8a10-4068-b88a-2e884a2bdc32" />
+	<!-- Added attribute, which says this action is controllable for if it should be possible or not. True means it is possible in default settings. -->
+	<nc:GridStateAlteration.normalEnabled>true</nc:GridStateAlteration.normalEnabled>
   </nc:TopologyAction>
   <nc:StaticPropertyRange rdf:ID="_fe2f9b5c-7a78-4f3d-983a-d9602f9e5fe7">
     <cim:IdentifiedObject.mRID>fe2f9b5c-7a78-4f3d-983a-d9602f9e5fe7</cim:IdentifiedObject.mRID>
